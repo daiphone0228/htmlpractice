@@ -1,0 +1,360 @@
+/*
+セレクタ { プロパティ名: 値; }
+セレクタ{
+	プロパティ名: 値;
+	プロパティ名: 値;
+}
+
+* ユニバーサルセレクタ(全部適用)
+要素名 p h1 div
+#id
+.class
+*/
+
+/* * { color: skyblue; }*/
+
+/*
+
+
+
+				
+セレクタ
+a, b
+a b
+a > b
+a + b
+ab
+
+*/
+/* 複数のセレクタ指定に使う */
+/* h1, p { color: skyblue; } */
+
+/* divの下にあるspanタグに適用 */
+/* div span { color: skyblue; } */
+
+/* divの直下にあるspanのみ適用 */
+/* div > span { color: skyblue; } */
+
+/* pの次に来るp要素 */
+/* p + p { color: skyblue; } */
+
+/* p要素でありかつクラスがpointsのものに適用 */
+/* p.points { color: skyblue; } */
+
+
+
+					
+/*
+属性セレクタ
+*/
+
+/* aタグのうちtitle属性があるものに対して色をつける */
+/* a[title] { color: skyblue; }*/
+
+/* aタグの中がgoogleだった場合 */
+/* a[href="http://google.com"] { color: orange; } */
+
+/* class属性にsearchが含まれている場合 */
+/* a[class~="search"] { color: violet; }*/
+
+
+
+					
+/*
+セレクタ
+擬似クラス
+※必ずこの順番で指定する
+*/
+
+/* ulタグのliの最初のみに適用 */
+/*ul li:first-child { color: skyblue; }*/
+
+/* 未訪問のリンクに対して適用 */
+/*a:link { color: violet; }*/
+
+/* 訪問済み */
+/*a:visited { color: orange; }*/
+
+/* マウスが乗った時 */
+/*a:hover { color: pink; }*/
+
+/* クリックした時 */
+/*a:active { color: red; }*/
+
+/*input:focus { background: skyblue;}*/
+
+						
+
+/*
+セレクタ
+擬似要素
+*/
+
+/* 一行目だけ適用 */
+/*p:first-line { color: skyblue; }*/
+
+/* 最初の文字だけ適用 */
+/*p:first-letter { color: skyblue; }*/
+
+
+/* なんらかの要素の前に適用させる */
+/*p:before {
+	content: "-->";
+}
+
+p:after {
+	content: "<--";
+}*/
+
+
+							
+
+
+/*
+セレクタ
+詳細度
+	(a) style=""
+	(b) id
+	(c) 属性/擬似クラス
+	(d) 要素/擬似要素
+
+*/
+
+/* 0, 0, 0, 1 */
+/*a { color: skyblue !important; }*/
+
+/* 0, 0, 1, 1 */
+/* 上記より詳細度が高い*/
+/*a.link { color: pink; }*/
+
+/* 0, 0, 1, 1 */
+/* 同じ詳細度だと後ろのものが優先される*/
+/*a.search { color: orange; }*/
+
+/* 0, 1, 0, 1 */
+/* 該当するid属性に対して適用される */
+/*a#site { color: blue; }*/
+
+/* style属性に適用したものが一番に優先される */
+/* HTML参照 */
+
+/* !importantをつけれ再優先される */
+
+							
+
+
+/*
+プロパティの値
+- 長さ
+	- px
+	- em
+	- %
+- 色
+	- 名前
+	- RGB
+		- Red 0-f / 00-ff / 0-255 / 0%-100%
+		- Green
+		- Blue
+*/
+
+/*body { font-size: 16px; }*/
+/*h1 { font-size: 2em; }  親要素に対して何倍か、つまり2倍の32px */
+/*h2 { font-size: 150%; }  親要素h1に対して150%の24px */
+
+/*h1 { color:blue; }*/
+/*h1 { color:#00f; }*/
+/*h1 { color:#0000ff; }*/
+/*h1 { color:rgb(0, 0, 255); }*/
+/*h1 { color:rgb(0%, 0%, 100%); }*/
+
+								
+
+/*
+ボックスモデル
+四角い領域を変更する
+幅: width;
+高さ: height;
+領域の枠線: border;
+要素の内側の余白: padding;
+要素の外側(親要素との間)の余白: margin;
+*/
+
+/*body, html { height: 100%; }*/
+/*div {*/
+	/*background: silver;*/
+	/*width: 200px;*/
+	/*width: 50%;*/
+	/*height: 100px;*/
+	/*height: 50%;*/
+	/*高さに関しては標準の長さを明示しなければならない*/
+/*}*/
+
+								
+
+/*
+
+border
+境界線を設定する
+
+border-color:
+border-style: solid / dotted / dashed / double / inset / outset
+border
+
+*/
+
+/*div {*/
+	/*border-color: orange;
+	border-width: 4px;
+	border-style: dotted;*/
+
+	/*一行でも表示可能*/
+	/*border: orange 4px dotted;*/
+
+	/*上下左右を個別に設定可能*/
+	/*border-top:orange 4px dotted;
+	border-bottom:orange 4px dotted;
+	border-right:orange 4px dotted;
+	border-left:orange 4px dotted;*/
+/*}*/
+
+
+							
+
+/*
+
+padding
+余白を設定する
+
+padding-top: 10px;
+padding-right: 10px;
+padding-left: 10px;
+padding-bottom: 10px;
+
+padding:まとめて指定できる
+		以下の4パターン
+	all
+	top/bottom right/left
+	top right/left bottom
+	top right bottom left
+
+*/
+
+/*body { margin: 0; }*/
+
+/*div {*/
+	/*background: silver;*/
+	/*padding: 10px 50px;*/
+	/*padding: 10px 20px 30px 40px;*/
+/*}*/
+
+								
+
+
+/*
+
+margin
+外側の余白を設定する
+
+marginの相殺
+上下にブロックボックスが来た場合
+結合されて、数値が大きい方のmarginが適用される
+
+margin-top: 10px;
+margin-right: 10px;
+margin-left: 10px;
+margin-bottom: 10px;
+
+margin:まとめて指定できる
+		以下の4パターン
+	all
+	top/bottom right/left
+	top right/left bottom
+	top right bottom left
+
+*/
+
+/*body { margin: 0; }
+
+div#box1 {
+	background: silver;
+	margin: 10px 20px 30px;
+}
+
+div#box2 {
+	background: orange;
+	margin: 20px;
+}*/
+
+							
+
+
+/*
+
+#14
+文字に関するプロパティ
+
+text
+- color: orange;
+- font-size: 14px;
+- font-family: Arial, Helevetica;
+- font-weight: right/center/left;
+- text-decoration:
+nderline/line-through/none;
+
+*/
+
+/*p {
+	color: silver;
+	font-size: 24px;
+	font-family: Arial;
+	font-weight: bold;
+	text-align: center;
+	text-decoration: underline line-through;
+}
+*/
+
+								
+
+
+/*
+
+#15 list-styleでリストのスタイルを変えよう
+
+list
+- list-style-type:
+	disc(黒丸)
+	circle(白丸)
+	spuare(四角)
+	decimal(連番)
+	lower-alpha(ABC)
+
+- list-style-image:
+	画像をリストの点にする
+	他の指示に上書きされるので、気をつける
+- list-style-position: inside/
+	マーカーが内側にくるか外側にくるか
+- list-style:
+
+
+*/
+
+/*ul {*/
+	/*list-style: inside decimal;*/
+	/*list-style: outside lower-alpha;*/
+	/*list-style: url('profile.jpg');*/
+/*}*/
+
+									
+
+
+
+
+
+
+
+
+
+
+
+
+
