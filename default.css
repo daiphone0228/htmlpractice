@@ -346,15 +346,250 @@ list
 
 									
 
+/*
+
+cursor
+その文字列に触れた時にカーソルのアイコンを変更する
+下記のように画像ファイルを入れる場合は必ず画像ファイルが
+ない場合の選択肢を記入する必要がある
+この場合、autoになる
+
+*/
+/*
+.help { cursor: help; }
+.dragme { cursor: move; }
+.clickme { cursor: pointer; }
+.smile { cursor: url('yajirushi.gif'),auto; }
+
+
+*/
+
+								
+
+/*
+
+#17
+background
+
+*/
+
+/*body {*/
+	/*background-color: silver;*/
+	/*background-image: url('profile.jpg');*/
+	/*background-repeat: no-repeat;*/
+	/*background-repeat: repeat-x;*/
+	/*background-repeat: repeat-y;*/
+	/*background-position: 10px 10px;*/
+	/*background-position: top center;*/
+	/*background-attachment: scroll;*/
+	/*background-attachment: fixed;*/
+	/*まとめてプロパティを指定することも出来る↓*/
+		/*background: url('profile.jpg') no-repeat fixed;*/
+/*}*/
+
+										
+
+
+/*
+
+display:
+- block
+	下に配置されていくボックス/ ブロックボックス
+	ブロックボックス生成するh1とかpの要素をブロックレベル要素
+- inline
+	左に詰められているボックス/ インラインボックス
+	インラインボックスを生成するspanやaをインラインレベル要素
+- list-item
+	左にマーカーを持たせたい
+- inline-block
+	インラインレベル要素のように左に詰められていくが
+	ブロックレベル要素の性質をもつもの
+- none
+	そもそも表示しない
+
+*/
+
+/*h1, p, span, a {
+	border: 1px solid #ddd;
+}
+
+h1, p {
+	width: 120px;
+	/*display: inline;*/
+	/*display: inline-block;*/
+/*}*/
+
+										
+
+/*
+
+display: table
+
+*/
+
+/*.container {
+	display: table;
+	width: 300px;
+}
+
+.box {
+	display: table-cell;
+	width: 100px;
+}
+
+.row {
+	display: table-row;
+	2*2の表を作るとき
+}
+
+.gray { background: gray; }
+.silver { background: silver; }
+.orange { background: orange; }
+*/
+
+										
 
 
 
+/*
+
+#20 positionで位置を調整してみよう
+position
+	static
+	relative
+	fixed
+	absolute
+
+*/
+
+/*body { margin: 0;}
+#box1 { width: 100px; height: 50px;}
+#box2 { width: 100px; height: 50px;}
+#box3 { width: 50px; height: 25px;}
+*/
+/*#box1 {*/
+	/*background: gray;*/
+	/*position: relative;*/
+	/*position: fixed;
+	top: 10px;
+	left: 10px;*/
+/*}*/
+
+/*#box2 {*/
+	/*background: silver;*/
+	/*position: static;*/
+	/*position: relative;*/
+/*}*/
+/*
+#box3 {
+	background: orange;
+	position: absolute;
+	top: 10px;
+	left:10px;
+}*/
 
 
 
+													
 
 
 
+/*
+
+#21 z-index overflowwoを理解しよう表す
+
+z-index
+- position:static以外の要素
+- 値が大きいほど上に来る
+
+overflow
+	visible
+	hidden
+	scroll
+
+*/
+
+/*body { margin: 0;}
+#box1, #box2, #box3 {
+	width: 100px;
+	height: 50px;
+	position: absolute;
+}*/
+/*
+#box1 {
+	background: gray;
+	top: 10px;
+	left: 10px;
+	z-index: 3;*/
+	/*overflow: hidden;*/
+/*	overflow: scroll;
+}*/
+
+/*#box2 {
+	background: silver;
+	top: 20px;
+	left: 20px;
+	z-index: 1;
+}*/
+/*
+#box3 {
+	background: orange;
+	top: 30px;
+	left: 30px;
+	z-index: 2;
+}*/
+
+											
+
+/*
+
+#21
+line-hight
+	一行の幅、フォントサイズとの差分は上下に均等に割り振られる
+vertical-align
+	文章の途中とか最後に画像などを表示したい時に使用する
+
+
+*/
+
+/*p {
+	border: 1px solid #ddd;
+	font-size: 18px;*/
+	/*line-height: 24px;*/
+/*	line-height: 1.5;
+}
+
+img { vertical-align: baseline/top/bottom/middle/?px/?em }
+
+
+
+*/
+
+												
+
+/*
+
+#23
+float
+	画像を浮かせて移動する
+clear
+	floatしたものの下から文章が繋がるようにする
+	つまりかぶらないようにする
+
+*/
+
+/*h1, h2, p, img {
+	border:1px solid #ddd;
+}
+
+img {
+	float: right;
+	width: 100px;
+}
+
+h2 {
+	clear: right;
+}*/
 
 
 

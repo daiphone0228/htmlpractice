@@ -1,0 +1,40 @@
+/*
+#3 色の調整
+- rgba
+	- Red
+	- Green
+	- Blue
+	- Alpha (0-1) ...透明度を表す
+- hs1 / hsla
+	- hue ...色相 0-360
+	- Saturation ...彩度 0-100%
+	- Lightness ...明るさ 0-100%
+	- Alpha(0-1) ...透明度
+
+*/
+
+div {
+	width: 100px;
+	height: 50px;
+}
+
+#box1 {
+	background: rgb(255, 100, 100);
+}
+
+#box2 {
+	background: rgba(255, 100, 100, .7);
+}
+
+#box3 {
+	background: hsla(210, 100%, 50%, .7);
+}
+
+#box4 {
+	background: hsla(210, 100%, 30%, .7);
+}
+
+#box5 {
+	background: hsla(100, 100%, 80%, 1);
+}
+
